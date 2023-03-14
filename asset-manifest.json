@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/react-admin-panel/static/css/main.c96f767f.css",
+    "main.js": "/react-admin-panel/static/js/main.0ae56ea5.js",
+    "static/media/Inter-Bold.ttf": "/react-admin-panel/static/media/Inter-Bold.88fa7ae373b07b41ecce.ttf",
+    "static/media/Inter-SemiBold.ttf": "/react-admin-panel/static/media/Inter-SemiBold.4d56bb21f2399db8ad48.ttf",
+    "static/media/Inter-Medium.ttf": "/react-admin-panel/static/media/Inter-Medium.6dcbc9bed1ec438907ee.ttf",
+    "static/media/Inter-Regular.ttf": "/react-admin-panel/static/media/Inter-Regular.e89cb19905e7db5591b0.ttf",
+    "index.html": "/react-admin-panel/index.html",
+    "main.c96f767f.css.map": "/react-admin-panel/static/css/main.c96f767f.css.map",
+    "main.0ae56ea5.js.map": "/react-admin-panel/static/js/main.0ae56ea5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c96f767f.css",
+    "static/js/main.0ae56ea5.js"
+  ]
+}
