@@ -13,6 +13,7 @@ import { Visibility, VisibilityOff, AccountCircle } from "@mui/icons-material";
 import LockIcon from "@mui/icons-material/Lock";
 import { generateNotification, MessageTypes } from "shared";
 import * as Styled from "./style";
+import { useNavigate } from "react-router-dom";
 
 const LoginButton = styled(Button)({
   width: "100%",
@@ -47,6 +48,8 @@ const LoginForm = () => {
   const [userName, setUserName] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
+  const navigate = useNavigate();
+
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -57,7 +60,7 @@ const LoginForm = () => {
     try {
       setIsLoading(true);
 
-      const res = await axios.post(
+      await axios.post(
         "https://dummyjson.com/auth/login",
         {
           username: userName,
@@ -70,9 +73,9 @@ const LoginForm = () => {
         }
       );
 
-      console.log(res);
       setIsLoading(false);
       generateNotification("Login Success", MessageTypes.SUCCESS);
+      navigate("/view-client");
     } catch {
       console.log("login api error");
       setIsLoading(false);
