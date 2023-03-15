@@ -1,6 +1,7 @@
 export const Paths = {
   login: "/",
   view: "/view-client",
+  add: "/add-client",
 };
 
 export enum MessageTypes {
