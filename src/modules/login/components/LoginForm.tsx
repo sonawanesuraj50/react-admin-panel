@@ -149,7 +149,7 @@ const LoginForm = () => {
               <Styled.FooterText>Privacy Policy</Styled.FooterText>
             </Styled.FooterTextWrap>
             <Styled.FooterText>
-              © Punctualiti 2022. All rights reserved
+              © Test 2022. All rights reserved
             </Styled.FooterText>
           </Styled.FooterTextContainer>
         </Styled.LoginFormWrap>

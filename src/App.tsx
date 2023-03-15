@@ -3,7 +3,7 @@ import Login from "./modules/login/Login";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/">
       <Routes>
         <Route path="/" element={<Login />} />
       </Routes>
