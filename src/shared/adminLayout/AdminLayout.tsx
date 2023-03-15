@@ -2,8 +2,8 @@ import styled from "@emotion/styled";
 import SearchIcon from "@mui/icons-material/Search";
 import { FormControl, InputAdornment, OutlinedInput } from "@mui/material";
 import { useState } from "react";
-import { Outlet } from "react-router-dom";
-import { TabName } from "shared/constants";
+import { Outlet, useNavigate } from "react-router-dom";
+import { TabName, IMAGES, Paths } from "shared";
 import * as Styled from "./style";
 
 const Form = styled(FormControl)({
@@ -30,10 +30,15 @@ const AdminLayout = () => {
   const [search, setSearch] = useState<String>("");
   const [tab, setTab] = useState<TabName>(TabName.VIEW);
 
+  const navigate = useNavigate();
+
   const handleTabName = (tab: TabName) => {
     setTab(tab);
   };
 
+  const handleLogout = () => {
+    navigate(Paths.login);
+  };
   return (
     <Styled.AdminLayoutContainer>
       <Styled.SidebarContainer>
@@ -69,6 +74,24 @@ const AdminLayout = () => {
             Add Clients
           </Styled.TabName>
         </Styled.TabContainer>
+
+        <Styled.UserInfoContainer>
+          <Styled.ProfileTextWrap>
+            <Styled.ProfileImage
+              src={IMAGES.userProfile.default}
+              alt="profile"
+            />
+            <div>
+              <Styled.UserName>James Burton</Styled.UserName>
+              <Styled.EmailId>james@thevouch.digital</Styled.EmailId>
+            </div>
+          </Styled.ProfileTextWrap>
+          <Styled.LogoutIcon
+            src={IMAGES.logoutIcon.default}
+            alt="logout"
+            onClick={handleLogout}
+          />
+        </Styled.UserInfoContainer>
       </Styled.SidebarContainer>
       <Styled.MainContainer>
         <Styled.HeaderContainer>

@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import { Visibility, VisibilityOff, AccountCircle } from "@mui/icons-material";
 import LockIcon from "@mui/icons-material/Lock";
-import { generateNotification, MessageTypes } from "shared";
+import { generateNotification, MessageTypes, Paths } from "shared";
 import * as Styled from "./style";
 import { useNavigate } from "react-router-dom";
 
@@ -75,7 +75,7 @@ const LoginForm = () => {
 
       setIsLoading(false);
       generateNotification("Login Success", MessageTypes.SUCCESS);
-      navigate("/view-client");
+      navigate(Paths.view);
     } catch {
       console.log("login api error");
       setIsLoading(false);
@@ -141,7 +141,7 @@ const LoginForm = () => {
               />
             </Form>
             <LoginButton variant="contained" type="submit">
-              {isLoading ? <CircularProgress /> : "Login"}
+              {isLoading ? <CircularProgress color="inherit" /> : "Login"}
             </LoginButton>
 
             <Styled.ForgotText>Forgot Password?</Styled.ForgotText>

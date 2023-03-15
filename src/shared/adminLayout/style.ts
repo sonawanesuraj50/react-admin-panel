@@ -10,8 +10,11 @@ export const AdminLayoutContainer = styled.div`
 `;
 
 export const SidebarContainer = styled.div`
+  display: flex;
+  flex-direction: column;
   padding: 24px 16px;
   box-shadow: 0px 1px 5px rgba(3, 0, 55, 0.08);
+  background: #FFFFFF;
 `;
 
 export const CompanyNameText = styled.div`
@@ -79,4 +82,44 @@ export const OutletContainer = styled.div`
   @media (max-width: 1000px) {
     overflow-y: unset;
   }
+`;
+
+export const UserInfoContainer = styled.div`
+  width: 100%;
+  height: 72px;
+  border-top: 1px solid rgb(184 184 184);
+  margin-top: auto;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+`;
+
+export const ProfileTextWrap = styled.div`
+  display: flex;
+  gap: 12px;
+`;
+
+export const ProfileImage = styled.img`
+  width: 40px;
+  height: 40px;
+  border-radius: 60px;
+`;
+
+export const UserName = styled.div`
+  font-family: "Inter-Bold";
+  font-size: 16px;
+  line-height: 22px;
+  color: #233244;
+`;
+
+export const EmailId = styled.div`
+  font-family: "Inter-Regular";
+  font-size: 12px;
+  line-height: 16px;
+  color: #233244;
+`;
+
+export const LogoutIcon = styled.img`
+  margin-left: auto;
+  cursor: pointer;
 `;

@@ -1,3 +1,8 @@
+export const Paths = {
+  login: "/",
+  view: "/view-client",
+};
+
 export enum MessageTypes {
   INFO = "info",
   SUCCESS = "success",
